@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Saquon Barkley</title>
+        <link rel="stylesheet" type="text/css"
+        href="style.css">
+    <script src="sketch.js" type="text/javascript" defer></script>
+</head>
+<body>
+    <!--Young God-->
+    <h1><font color="white">SAQUON</font></h1>
+    <div class="tab">
+        <button class="tablinks" onclick="openSubject(event, 'Childhood')">Childhood</button>
+        <button class="tablinks" onclick="openSubject(event, 'College')">College</button>
+        <button class="tablinks" onclick="openSubject(event, 'NFL')">NFL</button>
+    </div>
+
+    <div id="Childhood" class="tabcontent">
+        <h3><font color="white">Childhood</font></h3>
+        <p><font color="white">Saquon attended Whitehall Highschool.</font></p>
+        <img src="saquonhighschool.jpg" width="400" height="400">
+    </div>
+
+    <div id="College" class="tabcontent">
+        <h3><font color="white">College</font></h3>
+        <p><font color="white">Saquon attended Penn State.</font></p>
+        <img src="saquonpennstate.jpg" width="385.2" height="276.6">
+        <p><font color="white">Saquon was regarded as the number one runningback from his class after his illustrious college career - some even considered him the number one prospet overall.</font></p>
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/E0VALn4r8mg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div id="NFL" class="tabcontent">
+        <h3><font color="white">NFL</font></h3>
+        <p><font color="white">Saquon was drafted 2nd overall by the New York Giants in 2018.</font></p>
+        <img src="saquonnfl.jpg" width = "518.4" height="345.6">
+        <p><font color="white">Saquon led the league in scrimmage yards as a rookie with 2,028: 1,307 rushing and 721 receiving.</font></p>
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/nYhs74lThO0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+<script>
+function openSubject(evt, eventName){
+    let i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i=0; i < tabcontent.length; i++){
+        tabcontent[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i=0; i < tablinks.length; i++){
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(eventName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+</body>
+</html>
